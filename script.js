@@ -112,8 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (logoLink) logoLink.href = '#home';
     }
     
-    // Save to localStorage
-    localStorage.setItem('portfolioMode', mode);
+    // Save to sessionStorage
+    sessionStorage.setItem('portfolioMode', mode);
     
     // Re-trigger scroll effects to update animations & nav states
     setTimeout(handleScroll, 50);
@@ -124,8 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
     techModeBtn.addEventListener('click', () => setMode('tech'));
   }
 
-  // Load from localStorage or default to dance
-  const savedMode = localStorage.getItem('portfolioMode') || 'dance';
+  // Load from sessionStorage or default to dance
+  const savedMode = sessionStorage.getItem('portfolioMode') || 'dance';
   setMode(savedMode);
 
   // ==========================================================================
@@ -210,6 +210,19 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
       activeImageSet = certImages;
       currentIdx = index;
+      openLightbox();
+    });
+  });
+
+  // Bind click handlers to highlight certificates (e.g. 51st CID World Congress)
+  const highlightCerts = document.querySelectorAll('.clickable-highlight-cert');
+  highlightCerts.forEach((cert) => {
+    cert.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const src = cert.getAttribute('data-cert-src');
+      const alt = cert.getAttribute('data-title') || 'Certificate';
+      activeImageSet = [{ src, alt }];
+      currentIdx = 0;
       openLightbox();
     });
   });

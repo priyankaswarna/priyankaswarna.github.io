@@ -1847,3 +1847,32 @@ body.tech-mode .nav-menu a.active {
     gap: 3.5rem !important;
   }
 }
+
+/* Mobile Compaction for Mode Switcher Toggle */
+@media (max-width: 480px) {
+  .mode-text {
+    display: none !important;
+  }
+  .mode-btn {
+    padding: 0.5rem 0.75rem !important;
+  }
+  .mode-toggle-container {
+    margin-left: 0.75rem !important;
+    margin-top: 0 !important; /* Keep it on the same line as logo and menu toggle */
+  }
+}
+
+/* Logo Compaction for ultra-small mobile viewports */
+@media (max-width: 360px) {
+  .logo-text {
+    font-size: 1.15rem !important;
+  }
+}
+
+/* Clickable highlight certificate hover effect */
+.clickable-highlight-cert:hover .thumbnail-overlay {
+  opacity: 1 !important;
+}
+.clickable-highlight-cert:hover .highlights-img {
+  transform: scale(1.05);
+}
