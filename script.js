@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Handle sticky header background transition on scroll
   const handleScroll = () => {
+    if (!header) return;
     if (window.scrollY > 50) {
       header.classList.add('scroll-nav');
     } else {
@@ -63,23 +64,69 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Navigation item active state updater based on scroll height
-    let scrollY = window.pageYOffset;
-    sections.forEach(current => {
+    let scrollY = window.pageYOffset || window.scrollY;
+    
+    // Only highlight links for visible sections in active mode
+    const isTechMode = document.body.classList.contains('tech-mode');
+    const visibleSections = Array.from(sections).filter(sec => {
+      if (isTechMode) {
+        return sec.classList.contains('tech-only') || sec.id === 'contact';
+      } else {
+        return sec.classList.contains('dance-only') || sec.id === 'contact';
+      }
+    });
+
+    visibleSections.forEach(current => {
       const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 100;
+      const sectionTop = current.offsetTop - 120;
       const sectionId = current.getAttribute('id');
       
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        document.querySelector(`.nav-menu a[href*=${sectionId}]`)?.classList.add('active');
-      } else {
-        document.querySelector(`.nav-menu a[href*=${sectionId}]`)?.classList.remove('active');
+        document.querySelectorAll('.nav-menu .nav-item').forEach(item => item.classList.remove('active'));
+        document.querySelector(`.nav-menu a[href*="${sectionId}"]`)?.classList.add('active');
       }
     });
   };
 
   window.addEventListener('scroll', handleScroll);
-  // Trigger once on load to reveal hero / above fold sections
-  handleScroll();
+
+  // ==========================================================================
+  // DUAL-PERSONA SWITCHER LOGIC (DANCE VS. TECH MODE)
+  // ==========================================================================
+  const danceModeBtn = document.getElementById('danceModeBtn');
+  const techModeBtn = document.getElementById('techModeBtn');
+  const logoLink = document.getElementById('logoLink');
+
+  const setMode = (mode) => {
+    if (mode === 'tech') {
+      document.body.classList.remove('dance-mode');
+      document.body.classList.add('tech-mode');
+      danceModeBtn?.classList.remove('active');
+      techModeBtn?.classList.add('active');
+      if (logoLink) logoLink.href = '#tech-home';
+    } else {
+      document.body.classList.remove('tech-mode');
+      document.body.classList.add('dance-mode');
+      techModeBtn?.classList.remove('active');
+      danceModeBtn?.classList.add('active');
+      if (logoLink) logoLink.href = '#home';
+    }
+    
+    // Save to localStorage
+    localStorage.setItem('portfolioMode', mode);
+    
+    // Re-trigger scroll effects to update animations & nav states
+    setTimeout(handleScroll, 50);
+  };
+
+  if (danceModeBtn && techModeBtn) {
+    danceModeBtn.addEventListener('click', () => setMode('dance'));
+    techModeBtn.addEventListener('click', () => setMode('tech'));
+  }
+
+  // Load from localStorage or default to dance
+  const savedMode = localStorage.getItem('portfolioMode') || 'dance';
+  setMode(savedMode);
 
   // ==========================================================================
   // ACHIEVEMENTS & CERTIFICATIONS FILTERING

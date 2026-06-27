@@ -22,6 +22,145 @@
 }
 
 /* ==========================================================================
+   THEME ENGINE (TECH MODE VARIABLE OVERRIDES)
+   ========================================================================== */
+body.tech-mode {
+  --bg-dark: #0f1013;                 /* Deep charcoal black */
+  --bg-card: #15161b;                 /* Matte charcoal grey */
+  --bg-spotlight: #181c25;
+  --primary-burgundy: #1e3a8a;       /* Sophisticated Dark Indigo Blue */
+  --primary-burgundy-light: #2563eb; /* Corporate Blue */
+  --accent-gold: #3b82f6;            /* Accent Blue */
+  --accent-gold-light: #60a5fa;
+  --accent-gold-dark: #1d4ed8;
+  --glass-border: rgba(255, 255, 255, 0.08); /* Clean thin white/slate borders */
+  --glass-bg: rgba(21, 22, 27, 0.95);
+  --font-heading: 'Outfit', sans-serif; /* Clean modern font */
+}
+
+/* Tech Mode About Section layout grid alignment */
+body.tech-mode .about-grid {
+  grid-template-columns: 1.25fr 0.95fr !important;
+  align-items: start !important;
+  gap: 4.5rem !important;
+}
+
+/* Tech Mode Contact Section overrides */
+body.tech-mode .contact-image-side {
+  background-image: linear-gradient(rgba(10, 15, 26, 0.45), rgba(8, 10, 15, 0.95)), url('assets/tech_profile.jpg?v=2') !important;
+}
+
+body.tech-mode .contact-grid {
+  display: flex;
+  justify-content: center;
+}
+
+body.tech-mode .contact-image-side {
+  width: 100%;
+  max-width: 650px;
+  min-height: 480px;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+}
+/* Base Body Transition */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* ==========================================================================
+   MODE SWITCHER DYNAMIC DISPLAY RULES
+   ========================================================================== */
+/* Default (Dance Mode) */
+body.dance-mode .dance-link {
+  display: inline-block;
+}
+body.dance-mode .tech-link {
+  display: none !important;
+}
+body.dance-mode .dance-only {
+  display: block;
+}
+body.dance-mode .tech-only {
+  display: none !important;
+}
+body.dance-mode .nav-logo.dance-link {
+  display: block;
+}
+
+/* Tech Mode */
+body.tech-mode .dance-link {
+  display: none !important;
+}
+body.tech-mode .tech-link {
+  display: inline-block;
+}
+body.tech-mode .dance-only {
+  display: none !important;
+}
+body.tech-mode .tech-only {
+  display: block;
+}
+body.tech-mode .nav-logo.dance-link {
+  display: none !important;
+}
+
+/* ==========================================================================
+   MODE SWITCHER PILL STYLING
+   ========================================================================== */
+.mode-toggle-container {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4px;
+  border-radius: 30px;
+  margin-left: 2rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.mode-btn {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mode-btn:hover {
+  color: var(--text-primary);
+}
+
+.mode-btn.active {
+  background: var(--primary-burgundy);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.tech-mode .mode-btn.active {
+  background: var(--accent-gold);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* Mobile responsive toggle placement */
+@media (max-width: 1024px) {
+  .mode-toggle-container {
+    margin-left: 0;
+    margin-top: 1rem;
+    align-self: center;
+  }
+}
+
+/* ==========================================================================
    RESET & BASICS
    ========================================================================== */
 * {
@@ -44,6 +183,11 @@ body {
   position: relative;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Scroll Offset for Sticky Header */
+section[id] {
+  scroll-margin-top: 100px;
 }
 
 /* Ambient Stage Spotlight Tracking Glow (Cursor Micro-interaction) */
@@ -1443,6 +1587,122 @@ input:focus, textarea:focus {
   }
 }
 
+/* ==========================================================================
+   TECH MODE PORTFOLIO COMPONENT STYLING (MINIMALIST EDITORIAL CORPORATE)
+   ========================================================================== */
+body.tech-mode {
+  background-color: #0f1013 !important;
+}
+
+body.tech-mode .tech-only {
+  background-image: none !important;
+  background-color: #0f1013 !important;
+  position: relative;
+}
+
+body.tech-mode section {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+body.tech-mode #tech-home {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 8rem 2rem 5rem 2rem;
+}
+
+body.tech-mode #tech-home .hero-content {
+  opacity: 1;
+  transform: none;
+}
+
+/* Matte Editorial Cards */
+body.tech-mode .metric-card {
+  background: var(--bg-card) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 4px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: var(--transition-smooth) !important;
+}
+
+body.tech-mode .metric-card:hover {
+  border-color: var(--accent-gold) !important;
+  transform: translateY(-4px);
+}
+
+/* Minimalist Strategy Framework Box */
+.strategy-container {
+  transition: var(--transition-smooth);
+}
+
+.strategy-container:hover {
+  border-color: var(--accent-gold) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Skills cards minimalist rules */
+body.tech-mode .skills-card {
+  background: var(--bg-card) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 4px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: var(--transition-smooth);
+}
+
+body.tech-mode .skills-card:hover {
+  border-color: var(--accent-gold) !important;
+}
+
+body.tech-mode .skills-list-tags li {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: var(--text-primary) !important;
+  border-radius: 2px !important;
+  transition: var(--transition-fast);
+}
+
+body.tech-mode .skills-list-tags li:hover {
+  background: var(--accent-gold) !important;
+  border-color: var(--accent-gold) !important;
+  color: #fff !important;
+}
+
+/* Timeline Cards */
+body.tech-mode .timeline-item .timeline-content {
+  background: var(--bg-card) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 4px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: var(--transition-smooth);
+}
+
+body.tech-mode .timeline-item:hover .timeline-content {
+  border-color: var(--accent-gold) !important;
+}
+
+body.tech-mode .tech-education-list .edu-item {
+  border-left-color: var(--accent-gold) !important;
+}
+
+body.tech-mode .tech-education-list .edu-year {
+  color: var(--accent-gold) !important;
+}
+
+body.tech-mode .tech-education-list .edu-award {
+  color: var(--accent-gold-light) !important;
+}
+
+body.tech-mode .tech-honors-list h3 {
+  color: var(--accent-gold) !important;
+}
+
+/* Sticky Header active link highlight */
+body.tech-mode .nav-menu a.active {
+  color: var(--accent-gold) !important;
+  border-bottom: 2px solid var(--accent-gold);
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 15px;
@@ -1542,7 +1802,48 @@ input:focus, textarea:focus {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  .achievement-card {
-    padding: 1.5rem;
+  /* Tech Timeline Mobile Styles */
+  .tech-timeline::before {
+    left: 5px;
+  }
+  .timeline-item {
+    padding-left: 2rem !important;
+    margin-bottom: 2.5rem !important;
+  }
+  .timeline-dot {
+    width: 12px !important;
+    height: 12px !important;
+    left: 0 !important;
+  }
+  .timeline-content {
+    padding: 1.5rem !important;
+  }
+
+  /* Tech Hero Grid Mobile Overrides */
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+    text-align: center !important;
+  }
+  
+  .hero-left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-cta-group {
+    justify-content: center;
+  }
+  
+  .metrics-grid {
+    width: 100%;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3.5rem !important;
   }
 }
