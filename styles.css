@@ -1846,6 +1846,36 @@ body.tech-mode .nav-menu a.active {
     grid-template-columns: 1fr !important;
     gap: 3.5rem !important;
   }
+  
+  /* Tech Mode Mobile Specific Overrides */
+  body.tech-mode .hero-title {
+    font-size: 2.2rem !important;
+    line-height: 1.2 !important;
+  }
+  body.tech-mode .hero-subtitle {
+    font-size: 1.1rem !important;
+    margin-bottom: 2rem !important;
+  }
+  body.tech-mode .metrics-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  body.tech-mode .metric-card {
+    text-align: center !important;
+    padding: 1.25rem !important;
+  }
+  body.tech-mode .about-framework-side .section-tag {
+    display: none !important;
+  }
+  body.tech-mode .about-framework-side .section-title {
+    margin-top: 1rem !important;
+  }
+  body.tech-mode .skills-card {
+    padding: 1.75rem 1.5rem !important;
+  }
+  body.tech-mode .tech-skills-section {
+    padding: 5rem 1.5rem !important;
+  }
 }
 
 /* Mobile Compaction for Mode Switcher Toggle */
