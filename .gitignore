@@ -1,0 +1,7 @@
+# Ignore large PDF source files (GitHub has a 100MB limit and cert1.pdf is 117MB)
+cert1.pdf
+cert2.pdf
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
