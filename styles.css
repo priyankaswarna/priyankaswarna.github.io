@@ -1987,12 +1987,13 @@ body.landing-mode .landing-portal {
 
 body.landing-mode {
   background-color: #090a0f !important;
-  overflow-x: hidden;
+  overflow: hidden !important;
 }
 
 body.landing-mode .site-header,
-body.landing-mode main,
+body.landing-mode section,
 body.landing-mode footer,
+body.landing-mode .site-footer,
 body.landing-mode .glow-point {
   display: none !important;
 }
@@ -2162,23 +2163,65 @@ body.landing-mode .glow-point {
   text-decoration: underline;
 }
 
-/* Stacking for tablet/mobile views */
+/* Stacking and optimization for tablet/mobile views */
 @media (max-width: 768px) {
-  .portal-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  body.landing-mode {
+    overflow-y: auto !important; /* Allow scroll within portal on small heights */
   }
-  
-  .portal-tile {
-    height: 380px;
-    padding: 2rem;
+
+  .landing-portal {
+    align-items: flex-start; /* Prevent clipping at top on scroll */
+    padding: 2.5rem 1.5rem;
   }
-  
+
   .portal-title {
     font-size: 2.5rem;
   }
+
+  .portal-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .portal-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .portal-tile {
+    height: 250px;
+    padding: 1.75rem;
+  }
+
+  .tile-heading {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .tile-desc {
+    display: none; /* Hide descriptions to keep tiles compact and prevent scroll overflow */
+  }
+  
+  .tile-content {
+    transform: translateY(0); /* Always show CTA link on mobile without hover */
+  }
+}
+
+@media (max-width: 480px) {
+  .portal-title {
+    font-size: 2rem;
+  }
+
+  .portal-tile {
+    height: 200px;
+    padding: 1.5rem;
+  }
+
+  .tile-heading {
+    font-size: 1.35rem;
+  }
   
   .portal-subtitle {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
 }
