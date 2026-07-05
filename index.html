@@ -22,6 +22,38 @@
   <!-- Custom Cursor / Ambient Light Tracker (Micro-animation) -->
   <div class="glow-point"></div>
 
+  <!-- Homepage Portal Landing Page -->
+  <div id="landing-portal" class="landing-portal">
+    <div class="portal-container">
+      <h1 class="portal-title">Priyanka Swarna</h1>
+      <p class="portal-subtitle">Select a portfolio to explore</p>
+      
+      <div class="portal-grid">
+        <!-- Dance Tile -->
+        <div class="portal-tile dance-tile" id="portalDanceBtn">
+          <div class="tile-bg" style="background-image: url('assets/hero.jpg');"></div>
+          <div class="tile-content">
+            <span class="tile-tag">Classical Indian Artistry</span>
+            <h2 class="tile-heading">Bharatanatyam & Mohiniyattam</h2>
+            <p class="tile-desc">NJSCA Grant awardee preserving the heritage of classical Indian dance.</p>
+            <span class="tile-link-btn">Explore Artistry →</span>
+          </div>
+        </div>
+        
+        <!-- Tech Tile -->
+        <div class="portal-tile tech-tile" id="portalTechBtn">
+          <div class="tile-bg" style="background-image: url('assets/ps2.jpeg');"></div>
+          <div class="tile-content">
+            <span class="tile-tag">Enterprise Technology</span>
+            <h2 class="tile-heading">Data Strategy & Platforms</h2>
+            <p class="tile-desc">BMW NA Feature Team Lead directing cloud engineering & data governance.</p>
+            <span class="tile-link-btn">Explore Tech Profile →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Header / Navigation -->
   <header class="site-header">
     <div class="header-container">
@@ -982,38 +1014,38 @@
 
   <!-- Tech Hero Section -->
   <section id="tech-home" class="hero-section tech-only">
-    <div class="hero-bg" style="background: #0f1013;"></div>
+    <div class="hero-bg" style="background: var(--bg-dark);"></div>
     <div class="hero-content" style="max-width: 1200px; margin: 0 auto; width: 100%; padding: 0;">
       <div class="hero-grid" style="display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 4rem; align-items: center; text-align: left; width: 100%;">
         <div class="hero-left-content">
-          <h1 class="hero-title" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; font-family: var(--font-heading); font-weight: 800; color: #fff; letter-spacing: -0.02em; text-transform: uppercase;">SHAPING DATA.<br>DRIVING COMPLIANCE.<br>LEADING INNOVATION.</h1>
+          <h1 class="hero-title" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; font-family: var(--font-heading); font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em; text-transform: uppercase;">SHAPING DATA.<br>DRIVING COMPLIANCE.<br>LEADING INNOVATION.</h1>
           <p class="hero-subtitle" style="font-size: 1.35rem; color: var(--accent-gold); margin-bottom: 2rem; font-family: var(--font-body); font-weight: 500;">Priyanka Swarna  —  Enterprise Data Strategy & Platform Leader | Data Governance</p>
           
           <div class="hero-cta-group" style="display: flex; gap: 1rem; margin-bottom: 3rem;">
             <a href="#tech-about" class="cta-button" style="background: var(--accent-gold); color: #fff; border-color: var(--accent-gold); font-weight: 600; padding: 0.8rem 2.25rem; border-radius: 4px;">View Executive Profile</a>
-            <a href="#contact" class="cta-button" style="background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.15); padding: 0.8rem 2.25rem; border-radius: 4px;">Get in Touch</a>
+            <a href="#contact" class="cta-button" style="background: transparent; color: var(--text-primary); border: 1px solid var(--glass-border); padding: 0.8rem 2.25rem; border-radius: 4px;">Get in Touch</a>
           </div>
 
           <!-- Metrics Grid -->
           <div class="metrics-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
-            <div class="metric-card" style="background: var(--bg-card); border: 1px solid rgba(255, 255, 255, 0.06); padding: 1.5rem; border-radius: 4px;">
-              <div style="font-size: 2.25rem; font-weight: 700; color: #fff; margin-bottom: 0.25rem; font-family: var(--font-heading);">17+</div>
+            <div class="metric-card" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.5rem; border-radius: 4px;">
+              <div style="font-size: 2.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem; font-family: var(--font-heading);">17+</div>
               <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-body); letter-spacing: 0.05em; font-weight: 500;">Years Experience</div>
             </div>
-            <div class="metric-card" style="background: var(--bg-card); border: 1px solid rgba(255, 255, 255, 0.06); padding: 1.5rem; border-radius: 4px;">
-              <div style="font-size: 2.25rem; font-weight: 700; color: #fff; margin-bottom: 0.25rem; font-family: var(--font-heading);">30+</div>
+            <div class="metric-card" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.5rem; border-radius: 4px;">
+              <div style="font-size: 2.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem; font-family: var(--font-heading);">30+</div>
               <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-body); letter-spacing: 0.05em; font-weight: 500;">Team Members Led</div>
             </div>
-            <div class="metric-card" style="background: var(--bg-card); border: 1px solid rgba(255, 255, 255, 0.06); padding: 1.5rem; border-radius: 4px;">
-              <div style="font-size: 2.25rem; font-weight: 700; color: #fff; margin-bottom: 0.25rem; font-family: var(--font-heading);">AWS</div>
+            <div class="metric-card" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.5rem; border-radius: 4px;">
+              <div style="font-size: 2.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem; font-family: var(--font-heading);">AWS</div>
               <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-body); letter-spacing: 0.05em; font-weight: 500;">& Snowflake Cloud</div>
             </div>
           </div>
         </div>
         
         <div class="hero-right-image" style="display: flex; justify-content: center; align-items: center;">
-          <div class="hero-image-frame" style="width: 100%; max-width: 340px; aspect-ratio: 1/1.2; border-radius: 4px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.08);">
-            <img src="assets/tech_profile.jpg?v=2" alt="Priyanka Swarna Portrait" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="hero-image-frame" style="width: 100%; max-width: 340px; aspect-ratio: 1/1.2; border-radius: 4px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 1px solid var(--glass-border);">
+            <img src="assets/ps1.jpeg" alt="Priyanka Swarna Portrait" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
       </div>
@@ -1129,18 +1161,18 @@
           <h2 class="section-title" style="text-transform: uppercase; font-family: var(--font-heading); margin-bottom: 2rem; border-left: none; padding-left: 0;">Strategy Focus</h2>
           
           <!-- Minimalist Strategy Framework Card -->
-          <div class="strategy-container" style="background: var(--bg-card); border: 1px solid rgba(255, 255, 255, 0.08); padding: 2.5rem; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%;">
+          <div class="strategy-container" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2.5rem; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%;">
             <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-              <div style="border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 1rem;">
-                <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.25rem; font-family: var(--font-heading);">01 / Global Data Governance</h4>
+              <div style="border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
+                <h4 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.25rem; font-family: var(--font-heading);">01 / Global Data Governance</h4>
                 <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5;">Enforcing regulatory compliance, global data policies, and domain-based stewardship ownership models.</p>
               </div>
-              <div style="border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 1rem;">
-                <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.25rem; font-family: var(--font-heading);">02 / Cloud Platform Modernization</h4>
+              <div style="border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
+                <h4 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.25rem; font-family: var(--font-heading);">02 / Cloud Platform Modernization</h4>
                 <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5;">Migrating legacy storage systems to scalable AWS structures, Snowflake warehouses, and governed dbt pipelines.</p>
               </div>
-              <div style="border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 1rem;">
-                <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.25rem; font-family: var(--font-heading);">03 / Data Quality & Stewardship</h4>
+              <div style="border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
+                <h4 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.25rem; font-family: var(--font-heading);">03 / Data Quality & Stewardship</h4>
                 <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5;">Implementing automated data quality monitors, trace lineage mappings, and asset metadata catalogs.</p>
               </div>
             </div>

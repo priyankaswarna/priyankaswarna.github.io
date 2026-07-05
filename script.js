@@ -98,18 +98,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const logoLink = document.getElementById('logoLink');
 
   const setMode = (mode) => {
-    if (mode === 'tech') {
-      document.body.classList.remove('dance-mode');
+    if (mode === 'landing') {
+      document.body.classList.remove('tech-mode', 'dance-mode');
+      document.body.classList.add('landing-mode');
+      if (logoLink) logoLink.href = '#landing-portal';
+    } else if (mode === 'tech') {
+      document.body.classList.remove('dance-mode', 'landing-mode');
       document.body.classList.add('tech-mode');
       danceModeBtn?.classList.remove('active');
       techModeBtn?.classList.add('active');
-      if (logoLink) logoLink.href = '#tech-home';
+      if (logoLink) logoLink.href = '#landing-portal';
     } else {
-      document.body.classList.remove('tech-mode');
+      document.body.classList.remove('tech-mode', 'landing-mode');
       document.body.classList.add('dance-mode');
       techModeBtn?.classList.remove('active');
       danceModeBtn?.classList.add('active');
-      if (logoLink) logoLink.href = '#home';
+      if (logoLink) logoLink.href = '#landing-portal';
     }
     
     // Save to sessionStorage
@@ -124,8 +128,34 @@ document.addEventListener('DOMContentLoaded', () => {
     techModeBtn.addEventListener('click', () => setMode('tech'));
   }
 
-  // Load from sessionStorage or default to dance
-  const savedMode = sessionStorage.getItem('portfolioMode') || 'dance';
+  // Bind Portal Tile Click events
+  const portalDanceBtn = document.getElementById('portalDanceBtn');
+  const portalTechBtn = document.getElementById('portalTechBtn');
+
+  if (portalDanceBtn) {
+    portalDanceBtn.addEventListener('click', () => {
+      setMode('dance');
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    });
+  }
+  if (portalTechBtn) {
+    portalTechBtn.addEventListener('click', () => {
+      setMode('tech');
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    });
+  }
+
+  // Bind Logo click to reset to portal page
+  if (logoLink) {
+    logoLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      setMode('landing');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Load from sessionStorage or default to landing page
+  const savedMode = sessionStorage.getItem('portfolioMode') || 'landing';
   setMode(savedMode);
 
   // ==========================================================================

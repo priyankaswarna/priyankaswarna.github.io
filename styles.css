@@ -25,16 +25,18 @@
    THEME ENGINE (TECH MODE VARIABLE OVERRIDES)
    ========================================================================== */
 body.tech-mode {
-  --bg-dark: #0f1013;                 /* Deep charcoal black */
-  --bg-card: #15161b;                 /* Matte charcoal grey */
-  --bg-spotlight: #181c25;
-  --primary-burgundy: #1e3a8a;       /* Sophisticated Dark Indigo Blue */
-  --primary-burgundy-light: #2563eb; /* Corporate Blue */
-  --accent-gold: #3b82f6;            /* Accent Blue */
-  --accent-gold-light: #60a5fa;
-  --accent-gold-dark: #1d4ed8;
-  --glass-border: rgba(255, 255, 255, 0.08); /* Clean thin white/slate borders */
-  --glass-bg: rgba(21, 22, 27, 0.95);
+  --bg-dark: #f8fafc;                 /* Crisp light slate-grey background */
+  --bg-card: #ffffff;                 /* Pure white cards */
+  --bg-spotlight: #f1f5f9;
+  --primary-burgundy: #0f172a;       /* Slate dark blue for text headings */
+  --primary-burgundy-light: #2563eb; /* Secondary blue */
+  --accent-gold: #2563eb;            /* Accent brand blue */
+  --accent-gold-light: #1d4ed8;
+  --accent-gold-dark: #1e3a8a;
+  --text-primary: #0f172a;           /* Slate primary text */
+  --text-secondary: #475569;         /* Slate secondary text */
+  --glass-border: rgba(15, 23, 42, 0.08); /* Clean thin grey borders */
+  --glass-bg: rgba(255, 255, 255, 0.9);
   --font-heading: 'Outfit', sans-serif; /* Clean modern font */
 }
 
@@ -47,7 +49,7 @@ body.tech-mode .about-grid {
 
 /* Tech Mode Contact Section overrides */
 body.tech-mode .contact-image-side {
-  background-image: linear-gradient(rgba(10, 15, 26, 0.45), rgba(8, 10, 15, 0.95)), url('assets/tech_profile.jpg?v=2') !important;
+  background-image: linear-gradient(rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.85)), url('assets/ps3.jpeg') !important;
 }
 
 body.tech-mode .contact-grid {
@@ -61,6 +63,63 @@ body.tech-mode .contact-image-side {
   min-height: 480px;
   border-radius: 8px;
   border: 1px solid var(--glass-border);
+}
+
+/* Tech Mode Contact Text Overrides (always light on dark photo background) */
+body.tech-mode .contact-image-side .contact-details-title {
+  color: #ffffff !important;
+}
+body.tech-mode .contact-image-side p {
+  color: #cbd5e1 !important;
+}
+body.tech-mode .contact-image-side .contact-info-item {
+  color: #f1f5f9 !important;
+}
+body.tech-mode .contact-image-side .contact-info-item:hover {
+  color: #93c5fd !important;
+}
+body.tech-mode .contact-image-side .contact-info-item .icon {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Tech Mode Header & Footer Light Theme Overrides */
+body.tech-mode .site-header {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+body.tech-mode .site-header.scroll-nav {
+  background: #ffffff !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+body.tech-mode .menu-toggle .bar {
+  background-color: var(--text-primary) !important;
+}
+body.tech-mode .site-footer {
+  background: #ffffff !important;
+  border-top: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Soft Soft-Shadow Overrides in Light Mode */
+body.tech-mode .skills-card,
+body.tech-mode .timeline-content,
+body.tech-mode .strategy-container {
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
+}
+
+/* Switcher tracks in light mode */
+body.tech-mode .mode-toggle-container {
+  background: rgba(15, 23, 42, 0.04) !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+body.tech-mode .mode-btn {
+  color: var(--text-secondary) !important;
+}
+body.tech-mode .mode-btn.active {
+  background: #ffffff !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
 }
 /* Base Body Transition */
 body {
@@ -1591,12 +1650,12 @@ input:focus, textarea:focus {
    TECH MODE PORTFOLIO COMPONENT STYLING (MINIMALIST EDITORIAL CORPORATE)
    ========================================================================== */
 body.tech-mode {
-  background-color: #0f1013 !important;
+  background-color: var(--bg-dark) !important;
 }
 
 body.tech-mode .tech-only {
   background-image: none !important;
-  background-color: #0f1013 !important;
+  background-color: var(--bg-dark) !important;
   position: relative;
 }
 
@@ -1644,7 +1703,7 @@ body.tech-mode .metric-card:hover {
 /* Skills cards minimalist rules */
 body.tech-mode .skills-card {
   background: var(--bg-card) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid var(--glass-border) !important;
   border-radius: 4px !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: var(--transition-smooth);
@@ -1655,8 +1714,8 @@ body.tech-mode .skills-card:hover {
 }
 
 body.tech-mode .skills-list-tags li {
-  background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: rgba(15, 23, 42, 0.04) !important;
+  border: 1px solid var(--glass-border) !important;
   color: var(--text-primary) !important;
   border-radius: 2px !important;
   transition: var(--transition-fast);
@@ -1671,7 +1730,7 @@ body.tech-mode .skills-list-tags li:hover {
 /* Timeline Cards */
 body.tech-mode .timeline-item .timeline-content {
   background: var(--bg-card) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid var(--glass-border) !important;
   border-radius: 4px !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: var(--transition-smooth);
@@ -1905,4 +1964,221 @@ body.tech-mode .nav-menu a.active {
 }
 .clickable-highlight-cert:hover .highlights-img {
   transform: scale(1.05);
+}
+
+/* ==========================================================================
+   PORTAL LANDING PAGE STYLING
+   ========================================================================== */
+.landing-portal {
+  display: none;
+  min-height: 100vh;
+  background: #090a0f;
+  position: relative;
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  overflow-y: auto;
+}
+
+body.landing-mode .landing-portal {
+  display: flex;
+}
+
+body.landing-mode {
+  background-color: #090a0f !important;
+  overflow-x: hidden;
+}
+
+body.landing-mode .site-header,
+body.landing-mode main,
+body.landing-mode footer,
+body.landing-mode .glow-point {
+  display: none !important;
+}
+
+.portal-container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.portal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.portal-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-bottom: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.portal-tile {
+  position: relative;
+  height: 480px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  padding: 3rem 2.5rem;
+  text-align: left;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.portal-tile .tile-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.dance-tile .tile-bg {
+  background-position: center 20%;
+}
+
+.tech-tile .tile-bg {
+  background-position: center top;
+}
+
+/* Backdrops overlays */
+.dance-tile .tile-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(42, 8, 18, 0.98) 15%, rgba(42, 8, 18, 0.5) 60%, rgba(9, 10, 15, 0.1) 100%);
+  z-index: 2;
+}
+
+.tech-tile .tile-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.98) 15%, rgba(15, 23, 42, 0.5) 60%, rgba(9, 10, 15, 0.1) 100%);
+  z-index: 2;
+}
+
+.portal-tile .tile-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  transform: translateY(15px);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.portal-tile:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+  border-color: rgba(255,255,255,0.15);
+}
+
+.portal-tile:hover .tile-bg {
+  transform: scale(1.06);
+}
+
+.portal-tile:hover .tile-content {
+  transform: translateY(0);
+}
+
+.tile-tag {
+  display: inline-block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.dance-tile .tile-tag {
+  color: var(--accent-gold);
+}
+
+.tech-tile .tile-tag {
+  color: #60a5fa;
+}
+
+.tile-heading {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.dance-tile .tile-heading {
+  font-family: 'Playfair Display', serif;
+}
+
+.tech-tile .tile-heading {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.tile-desc {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin-bottom: 1.75rem;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+.tile-link-btn {
+  display: inline-block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.dance-tile .tile-link-btn {
+  color: var(--accent-gold-light);
+}
+
+.tech-tile .tile-link-btn {
+  color: #60a5fa;
+}
+
+.portal-tile:hover .tile-link-btn {
+  text-decoration: underline;
+}
+
+/* Stacking for tablet/mobile views */
+@media (max-width: 768px) {
+  .portal-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .portal-tile {
+    height: 380px;
+    padding: 2rem;
+  }
+  
+  .portal-title {
+    font-size: 2.5rem;
+  }
+  
+  .portal-subtitle {
+    margin-bottom: 2.5rem;
+  }
 }
