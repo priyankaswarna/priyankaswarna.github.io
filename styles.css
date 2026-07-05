@@ -2189,8 +2189,13 @@ body.landing-mode .glow-point {
   }
 
   .portal-tile {
-    height: 250px;
+    height: 320px;
     padding: 1.75rem;
+  }
+
+  .dance-tile .tile-bg,
+  .tech-tile .tile-bg {
+    background-position: center 20% !important;
   }
 
   .tile-heading {
@@ -2213,7 +2218,7 @@ body.landing-mode .glow-point {
   }
 
   .portal-tile {
-    height: 200px;
+    height: 260px;
     padding: 1.5rem;
   }
 
