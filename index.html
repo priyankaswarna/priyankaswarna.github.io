@@ -1019,34 +1019,37 @@
     <div class="gradient-ring" style="width: 12rem; height: 12rem; top: 25%; right: 10%; opacity: 0.3;"></div>
     
     <div class="hero-content" style="max-width: 1200px; margin: 0 auto; width: 100%; padding: 0; position: relative; z-index: 10;">
-      <div class="hero-grid" style="display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 4rem; align-items: center; text-align: left; width: 100%;">
-        <div class="hero-left-content">
+      <div class="hero-grid">
+        <!-- 1. Hero Text Group -->
+        <div class="hero-text-group">
           <p class="hero-tagline" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--primary-burgundy); margin-bottom: 1rem; font-family: var(--font-body);">Enterprise Data Strategy & Platform Leader · Data Governance</p>
           <h1 class="hero-title" style="font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem; font-family: var(--font-heading); font-weight: 700; color: var(--text-primary); letter-spacing: -0.01em;">Priyanka Swarna</h1>
           <p class="hero-subtitle" style="font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 2rem; font-family: var(--font-body); font-weight: 400; line-height: 1.6;">Helping organizations shape data, drive compliance, and lead modern cloud analytics platform innovations.</p>
-          
-          <div class="hero-cta-group" style="display: flex; gap: 1rem; margin-bottom: 3rem;">
-            <a href="#tech-about" class="cta-button" style="background: var(--gradient-primary); color: #fff; border: none; font-weight: 600; padding: 0.8rem 2.25rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(25, 80, 102, 0.2); transition: transform 0.2s ease;">View Experience</a>
-            <a href="#contact" class="cta-button" style="background: transparent; color: var(--text-primary); border: 1px solid var(--glass-border); padding: 0.8rem 2.25rem; border-radius: 8px; font-weight: 600;">Get in Touch</a>
-          </div>
+        </div>
+        
+        <!-- 2. Hero CTA Group -->
+        <div class="hero-cta-group" style="display: flex; gap: 1rem; margin-bottom: 3rem;">
+          <a href="#tech-about" class="cta-button" style="background: var(--gradient-primary); color: #fff; border: none; font-weight: 600; padding: 0.8rem 2.25rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(25, 80, 102, 0.2); transition: transform 0.2s ease;">View Experience</a>
+          <a href="#contact" class="cta-button" style="background: transparent; color: var(--text-primary); border: 1px solid var(--glass-border); padding: 0.8rem 2.25rem; border-radius: 8px; font-weight: 600;">Get in Touch</a>
+        </div>
 
-          <!-- Metrics Grid -->
-          <div class="metrics-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
-            <div class="metric-card" style="background: var(--gradient-accent); border: 1px solid rgba(25, 80, 102, 0.1); padding: 1.5rem; border-radius: 8px; text-align: center; position: relative; overflow: hidden;">
-              <div style="font-size: 2.25rem; font-weight: 700; color: var(--primary-burgundy); margin-bottom: 0.25rem; font-family: var(--font-heading);">17+</div>
-              <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-body); letter-spacing: 0.05em; font-weight: 500;">Years Experience</div>
-            </div>
-            <div class="metric-card" style="background: var(--gradient-accent); border: 1px solid rgba(25, 80, 102, 0.1); padding: 1.5rem; border-radius: 8px; text-align: center; position: relative; overflow: hidden;">
-              <div style="font-size: 2.25rem; font-weight: 700; color: var(--primary-burgundy); margin-bottom: 0.25rem; font-family: var(--font-heading);">30+</div>
-              <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-body); letter-spacing: 0.05em; font-weight: 500;">Team Members Led</div>
-            </div>
-            <div class="metric-card" style="background: var(--gradient-accent); border: 1px solid rgba(25, 80, 102, 0.1); padding: 1.5rem; border-radius: 8px; text-align: center; position: relative; overflow: hidden;">
-              <div style="font-size: 2.25rem; font-weight: 700; color: var(--primary-burgundy); margin-bottom: 0.25rem; font-family: var(--font-heading);">AWS</div>
-              <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-body); letter-spacing: 0.05em; font-weight: 500;">& Snowflake Cloud</div>
-            </div>
+        <!-- 3. Hero Metrics Grid -->
+        <div class="metrics-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+          <div class="metric-card" style="background: var(--gradient-accent); border: 1px solid rgba(25, 80, 102, 0.1); padding: 1.5rem; border-radius: 8px; text-align: center; position: relative; overflow: hidden;">
+            <div style="font-size: 2.25rem; font-weight: 700; color: var(--primary-burgundy); margin-bottom: 0.25rem; font-family: var(--font-heading);">17+</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-body); letter-spacing: 0.05em; font-weight: 500;">Years Experience</div>
+          </div>
+          <div class="metric-card" style="background: var(--gradient-accent); border: 1px solid rgba(25, 80, 102, 0.1); padding: 1.5rem; border-radius: 8px; text-align: center; position: relative; overflow: hidden;">
+            <div style="font-size: 2.25rem; font-weight: 700; color: var(--primary-burgundy); margin-bottom: 0.25rem; font-family: var(--font-heading);">30+</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-body); letter-spacing: 0.05em; font-weight: 500;">Team Members Led</div>
+          </div>
+          <div class="metric-card" style="background: var(--gradient-accent); border: 1px solid rgba(25, 80, 102, 0.1); padding: 1.5rem; border-radius: 8px; text-align: center; position: relative; overflow: hidden;">
+            <div style="font-size: 2.25rem; font-weight: 700; color: var(--primary-burgundy); margin-bottom: 0.25rem; font-family: var(--font-heading);">AWS</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-body); letter-spacing: 0.05em; font-weight: 500;">& Snowflake Cloud</div>
           </div>
         </div>
         
+        <!-- 4. Hero Right Image -->
         <div class="hero-right-image">
           <div class="tech-hero-image-wrapper">
             <div class="tech-hero-image-blur"></div>
@@ -1339,6 +1342,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
 
   <!-- Custom Script -->
   <script src="script.js"></script>

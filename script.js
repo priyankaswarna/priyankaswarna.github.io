@@ -374,4 +374,27 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // ==========================================================================
+  // SCROLL TO TOP FLOATING BUTTON HANDLER
+  // ==========================================================================
+  const scrollToTopBtn = document.getElementById('scrollToTop');
+
+  if (scrollToTopBtn) {
+    window.addEventListener('scroll', () => {
+      // Show button if page is scrolled down past 400px AND not in landing mode
+      if (window.scrollY > 400 && !document.body.classList.contains('landing-mode')) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 });
