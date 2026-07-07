@@ -1013,39 +1013,46 @@
      ========================================================================== -->
 
   <!-- Tech Hero Section -->
-  <section id="tech-home" class="hero-section tech-only">
-    <div class="hero-bg" style="background: var(--bg-dark);"></div>
-    <div class="hero-content" style="max-width: 1200px; margin: 0 auto; width: 100%; padding: 0;">
+  <section id="tech-home" class="hero-section tech-only" style="position: relative; overflow: hidden; background: var(--bg-dark);">
+    <div class="gradient-blob" style="background: var(--gradient-accent); width: 18rem; height: 18rem; top: -5rem; left: -5rem;"></div>
+    <div class="gradient-blob" style="background: var(--gradient-warm); width: 24rem; height: 24rem; bottom: -8rem; right: -6rem;"></div>
+    <div class="gradient-ring" style="width: 12rem; height: 12rem; top: 25%; right: 10%; opacity: 0.3;"></div>
+    
+    <div class="hero-content" style="max-width: 1200px; margin: 0 auto; width: 100%; padding: 0; position: relative; z-index: 10;">
       <div class="hero-grid" style="display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 4rem; align-items: center; text-align: left; width: 100%;">
         <div class="hero-left-content">
-          <h1 class="hero-title" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; font-family: var(--font-heading); font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em; text-transform: uppercase;">SHAPING DATA.<br>DRIVING COMPLIANCE.<br>LEADING INNOVATION.</h1>
-          <p class="hero-subtitle" style="font-size: 1.35rem; color: var(--accent-gold); margin-bottom: 2rem; font-family: var(--font-body); font-weight: 500;">Priyanka Swarna  —  Enterprise Data Strategy & Platform Leader | Data Governance</p>
+          <p class="hero-tagline" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--primary-burgundy); margin-bottom: 1rem; font-family: var(--font-body);">Enterprise Data Strategy & Platform Leader · Data Governance</p>
+          <h1 class="hero-title" style="font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem; font-family: var(--font-heading); font-weight: 700; color: var(--text-primary); letter-spacing: -0.01em;">Priyanka Swarna</h1>
+          <p class="hero-subtitle" style="font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 2rem; font-family: var(--font-body); font-weight: 400; line-height: 1.6;">Helping organizations shape data, drive compliance, and lead modern cloud analytics platform innovations.</p>
           
           <div class="hero-cta-group" style="display: flex; gap: 1rem; margin-bottom: 3rem;">
-            <a href="#tech-about" class="cta-button" style="background: var(--accent-gold); color: #fff; border-color: var(--accent-gold); font-weight: 600; padding: 0.8rem 2.25rem; border-radius: 4px;">View Executive Profile</a>
-            <a href="#contact" class="cta-button" style="background: transparent; color: var(--text-primary); border: 1px solid var(--glass-border); padding: 0.8rem 2.25rem; border-radius: 4px;">Get in Touch</a>
+            <a href="#tech-about" class="cta-button" style="background: var(--gradient-primary); color: #fff; border: none; font-weight: 600; padding: 0.8rem 2.25rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(25, 80, 102, 0.2); transition: transform 0.2s ease;">View Experience</a>
+            <a href="#contact" class="cta-button" style="background: transparent; color: var(--text-primary); border: 1px solid var(--glass-border); padding: 0.8rem 2.25rem; border-radius: 8px; font-weight: 600;">Get in Touch</a>
           </div>
 
           <!-- Metrics Grid -->
           <div class="metrics-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
-            <div class="metric-card" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.5rem; border-radius: 4px;">
-              <div style="font-size: 2.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem; font-family: var(--font-heading);">17+</div>
+            <div class="metric-card" style="background: var(--gradient-accent); border: 1px solid rgba(25, 80, 102, 0.1); padding: 1.5rem; border-radius: 8px; text-align: center; position: relative; overflow: hidden;">
+              <div style="font-size: 2.25rem; font-weight: 700; color: var(--primary-burgundy); margin-bottom: 0.25rem; font-family: var(--font-heading);">17+</div>
               <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-body); letter-spacing: 0.05em; font-weight: 500;">Years Experience</div>
             </div>
-            <div class="metric-card" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.5rem; border-radius: 4px;">
-              <div style="font-size: 2.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem; font-family: var(--font-heading);">30+</div>
+            <div class="metric-card" style="background: var(--gradient-accent); border: 1px solid rgba(25, 80, 102, 0.1); padding: 1.5rem; border-radius: 8px; text-align: center; position: relative; overflow: hidden;">
+              <div style="font-size: 2.25rem; font-weight: 700; color: var(--primary-burgundy); margin-bottom: 0.25rem; font-family: var(--font-heading);">30+</div>
               <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-body); letter-spacing: 0.05em; font-weight: 500;">Team Members Led</div>
             </div>
-            <div class="metric-card" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.5rem; border-radius: 4px;">
-              <div style="font-size: 2.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem; font-family: var(--font-heading);">AWS</div>
+            <div class="metric-card" style="background: var(--gradient-accent); border: 1px solid rgba(25, 80, 102, 0.1); padding: 1.5rem; border-radius: 8px; text-align: center; position: relative; overflow: hidden;">
+              <div style="font-size: 2.25rem; font-weight: 700; color: var(--primary-burgundy); margin-bottom: 0.25rem; font-family: var(--font-heading);">AWS</div>
               <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-body); letter-spacing: 0.05em; font-weight: 500;">& Snowflake Cloud</div>
             </div>
           </div>
         </div>
         
-        <div class="hero-right-image" style="display: flex; justify-content: center; align-items: center;">
-          <div class="hero-image-frame" style="width: 100%; max-width: 340px; aspect-ratio: 1/1.2; border-radius: 4px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 1px solid var(--glass-border);">
-            <img src="assets/ps1.jpeg" alt="Priyanka Swarna Portrait" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="hero-right-image">
+          <div class="tech-hero-image-wrapper">
+            <div class="tech-hero-image-blur"></div>
+            <div class="tech-hero-image-frame">
+              <img src="assets/ps1.jpeg" alt="Priyanka Swarna Portrait">
+            </div>
           </div>
         </div>
       </div>
@@ -1053,71 +1060,74 @@
   </section>
 
   <!-- Tech Skills Section -->
-  <section id="tech-skills" class="tech-skills-section scroll-reveal tech-only">
-    <div class="section-container">
+  <section id="tech-skills" class="tech-skills-section scroll-reveal tech-only" style="position: relative; overflow: hidden; background: var(--bg-dark);">
+    <div class="gradient-blob" style="background: var(--gradient-soft); width: 16rem; height: 16rem; top: 2.5rem; right: -4rem;"></div>
+    <div class="gradient-ring" style="width: 8rem; height: 8rem; bottom: 5rem; left: 5%; opacity: 0.2;"></div>
+    
+    <div class="section-container" style="position: relative; z-index: 10;">
       <div class="section-center-head">
         <div class="section-tag text-center">Core Competencies</div>
         <h2 class="section-title text-center">Technical Expertise & Skills</h2>
       </div>
 
-      <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; margin-top: 3.5rem;">
+      <div class="skills-grid">
         <!-- Cloud & Architecture -->
-        <div class="skills-card" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2.5rem 2rem; border-radius: 6px; box-shadow: 0 15px 35px rgba(0,0,0,0.25); transition: var(--transition-smooth); position: relative; overflow: hidden;">
-          <div class="skills-card-icon" style="font-size: 2rem; margin-bottom: 1.25rem;">☁️</div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.75rem;">Data Architecture & Cloud</h3>
-          <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">Designing modern, scalable cloud-native architectures and managing platform migrations.</p>
-          <ul class="skills-list-tags" style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">AWS (Glue, PySpark, S3, Iceberg)</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">Snowflake</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">dbt (Data Build Tool)</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">Informatica</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">Mainframe Migrations</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">Oracle</li>
+        <div class="skills-card">
+          <div class="skills-card-icon">☁️</div>
+          <h3>Data Architecture & Cloud</h3>
+          <p>Designing modern, scalable cloud-native architectures and managing platform migrations.</p>
+          <ul class="skills-list-tags">
+            <li>AWS (Glue, PySpark, S3, Iceberg)</li>
+            <li>Snowflake</li>
+            <li>dbt (Data Build Tool)</li>
+            <li>Informatica</li>
+            <li>Mainframe Migrations</li>
+            <li>Oracle</li>
           </ul>
         </div>
 
         <!-- Business Intelligence -->
-        <div class="skills-card" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2.5rem 2rem; border-radius: 6px; box-shadow: 0 15px 35px rgba(0,0,0,0.25); transition: var(--transition-smooth); position: relative; overflow: hidden;">
-          <div class="skills-card-icon" style="font-size: 2rem; margin-bottom: 1.25rem;">📊</div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.75rem;">Analytics & BI Platforms</h3>
-          <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">Transforming complex datasets into executive dashboards and actionable business insights.</p>
-          <ul class="skills-list-tags" style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">Amazon QuickSight</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">Tableau</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">Power BI</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">MicroStrategy</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">Cognos</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">Executive Reporting</li>
+        <div class="skills-card">
+          <div class="skills-card-icon">📊</div>
+          <h3>Analytics & BI Platforms</h3>
+          <p>Transforming complex datasets into executive dashboards and actionable business insights.</p>
+          <ul class="skills-list-tags">
+            <li>Amazon QuickSight</li>
+            <li>Tableau</li>
+            <li>Power BI</li>
+            <li>MicroStrategy</li>
+            <li>Cognos</li>
+            <li>Executive Reporting</li>
           </ul>
         </div>
 
         <!-- Strategy & Leadership -->
-        <div class="skills-card" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2.5rem 2rem; border-radius: 6px; box-shadow: 0 15px 35px rgba(0,0,0,0.25); transition: var(--transition-smooth); position: relative; overflow: hidden;">
-          <div class="skills-card-icon" style="font-size: 2rem; margin-bottom: 1.25rem;">🧠</div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.75rem;">Governance & Strategy</h3>
-          <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">Setting data governance policies, managing product portfolios, and directing supplier ecosystems.</p>
-          <ul class="skills-list-tags" style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">Data Strategy Definition</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">Product Lifecycle</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">DevOps & Agile (CSM®, ACSM®)</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">Global Hub Alignment</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">Vendor Ecosystems</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">ITIL® Framework</li>
+        <div class="skills-card">
+          <div class="skills-card-icon">🧠</div>
+          <h3>Governance & Strategy</h3>
+          <p>Setting data governance policies, managing product portfolios, and directing supplier ecosystems.</p>
+          <ul class="skills-list-tags">
+            <li>Data Strategy Definition</li>
+            <li>Product Lifecycle</li>
+            <li>DevOps & Agile (CSM®, ACSM®)</li>
+            <li>Global Hub Alignment</li>
+            <li>Vendor Ecosystems</li>
+            <li>ITIL® Framework</li>
           </ul>
         </div>
 
         <!-- Development -->
-        <div class="skills-card" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2.5rem 2rem; border-radius: 6px; box-shadow: 0 15px 35px rgba(0,0,0,0.25); transition: var(--transition-smooth); position: relative; overflow: hidden;">
-          <div class="skills-card-icon" style="font-size: 2rem; margin-bottom: 1.25rem;">⚙️</div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.75rem;">Core Software Engineering</h3>
-          <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">Writing clean, production-grade scripts, optimizing databases, and orchestrating API pipelines.</p>
-          <ul class="skills-list-tags" style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">Python</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">SQL</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">ETL / ELT Pipelines</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">Data Modeling</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">API Integrations</li>
-            <li style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.15); padding: 0.35rem 0.75rem; border-radius: 30px; font-size: 0.8rem; color: var(--accent-gold-light); font-weight: 500;">Control-M Orchestration</li>
+        <div class="skills-card">
+          <div class="skills-card-icon">⚙️</div>
+          <h3>Core Software Engineering</h3>
+          <p>Writing clean, production-grade scripts, optimizing databases, and orchestrating API pipelines.</p>
+          <ul class="skills-list-tags">
+            <li>Python</li>
+            <li>SQL</li>
+            <li>ETL / ELT Pipelines</li>
+            <li>Data Modeling</li>
+            <li>API Integrations</li>
+            <li>Control-M Orchestration</li>
           </ul>
         </div>
       </div>
@@ -1125,8 +1135,10 @@
   </section>
 
   <!-- Tech About Section -->
-  <section id="tech-about" class="about-section scroll-reveal tech-only">
-    <div class="section-container">
+  <section id="tech-about" class="about-section scroll-reveal tech-only section-alt" style="position: relative; overflow: hidden;">
+    <div class="gradient-blob" style="background: var(--gradient-warm); width: 14rem; height: 14rem; top: -2.5rem; left: -4rem;"></div>
+    
+    <div class="section-container" style="position: relative; z-index: 10;">
       <div class="about-grid">
         <div class="about-info">
           <div class="section-tag">Executive Summary</div>
@@ -1137,55 +1149,55 @@
             <p>Her leadership in data strategy execution has been directly recognized by executive stakeholders and the President and CEO of BMW of North America for supporting key regulatory outcomes.</p>
           </div>
           
-          <div class="tech-education-list" style="margin-top: 2.5rem;">
-            <h3 style="font-size: 1.25rem; color: var(--accent-gold); margin-bottom: 1.25rem; font-family: var(--font-heading);">Education & Credentials</h3>
-            <div class="edu-item" style="margin-bottom: 1.5rem; border-left: 2px solid var(--accent-gold); padding-left: 1rem;">
-              <span class="edu-year" style="display: block; font-size: 0.85rem; color: var(--accent-gold); text-transform: uppercase; font-family: var(--font-body); letter-spacing: 0.05em; margin-bottom: 0.25rem;">Class of 2027</span>
-              <h4 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.25rem;">M.S., Business Analytics & Artificial Intelligence</h4>
-              <p class="edu-school" style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.25rem;">NYU Stern School of Business</p>
-              <p class="edu-award" style="font-size: 0.95rem; color: var(--accent-gold-light); font-style: italic; font-weight: 500;">✨ Anindya Ghose Distinguished Scholar</p>
+          <div class="tech-education-list">
+            <h3>Education & Credentials</h3>
+            <div class="edu-item">
+              <span class="edu-year">Class of 2027</span>
+              <h4>M.S., Business Analytics & Artificial Intelligence</h4>
+              <p class="edu-school">NYU Stern School of Business</p>
+              <p class="edu-award">✨ Anindya Ghose Distinguished Scholar</p>
             </div>
-            <div class="edu-item" style="margin-bottom: 1.5rem; border-left: 2px solid var(--accent-gold); padding-left: 1rem;">
-              <h4 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.25rem;">B.E., Electrical & Electronics Engineering</h4>
-              <p class="edu-school" style="font-size: 0.95rem; color: var(--text-secondary);">Bachelor of Engineering</p>
+            <div class="edu-item">
+              <h4>B.E., Electrical & Electronics Engineering</h4>
+              <p class="edu-school">Bachelor of Engineering</p>
             </div>
-            <div class="edu-item" style="border-left: 2px solid var(--accent-gold); padding-left: 1rem;">
-              <h4 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.25rem;">P.G. Diploma, International Business</h4>
-              <p class="edu-school" style="font-size: 0.95rem; color: var(--text-secondary);">Post-Graduate Diploma</p>
+            <div class="edu-item">
+              <h4>P.G. Diploma, International Business</h4>
+              <p class="edu-school">Post-Graduate Diploma</p>
             </div>
           </div>
         </div>
 
-        <div class="about-framework-side" style="display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; width: 100%;">
+        <div class="about-framework-side">
           <div class="section-tag" style="visibility: hidden; margin-bottom: 0.5rem; opacity: 0; pointer-events: none;">Spacer</div>
-          <h2 class="section-title" style="text-transform: uppercase; font-family: var(--font-heading); margin-bottom: 2rem; border-left: none; padding-left: 0;">Strategy Focus</h2>
+          <h2 class="section-title framework-heading">Strategy Focus</h2>
           
           <!-- Minimalist Strategy Framework Card -->
-          <div class="strategy-container" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2.5rem; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%;">
-            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-              <div style="border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
-                <h4 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.25rem; font-family: var(--font-heading);">01 / Global Data Governance</h4>
-                <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5;">Enforcing regulatory compliance, global data policies, and domain-based stewardship ownership models.</p>
+          <div class="strategy-container">
+            <div class="strategy-steps">
+              <div class="strategy-step">
+                <h4>01 / Global Data Governance</h4>
+                <p>Enforcing regulatory compliance, global data policies, and domain-based stewardship ownership models.</p>
               </div>
-              <div style="border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
-                <h4 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.25rem; font-family: var(--font-heading);">02 / Cloud Platform Modernization</h4>
-                <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5;">Migrating legacy storage systems to scalable AWS structures, Snowflake warehouses, and governed dbt pipelines.</p>
+              <div class="strategy-step">
+                <h4>02 / Cloud Platform Modernization</h4>
+                <p>Migrating legacy storage systems to scalable AWS structures, Snowflake warehouses, and governed dbt pipelines.</p>
               </div>
-              <div style="border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
-                <h4 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.25rem; font-family: var(--font-heading);">03 / Data Quality & Stewardship</h4>
-                <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5;">Implementing automated data quality monitors, trace lineage mappings, and asset metadata catalogs.</p>
+              <div class="strategy-step">
+                <h4>03 / Data Quality & Stewardship</h4>
+                <p>Implementing automated data quality monitors, trace lineage mappings, and asset metadata catalogs.</p>
               </div>
             </div>
           </div>
 
-          <div class="tech-honors-list" style="margin-top: 2.5rem;">
-            <h3 style="font-size: 1.25rem; color: var(--accent-gold); margin-bottom: 1rem; font-family: var(--font-heading);">Honors & Spotlights</h3>
-            <ul style="list-style: none; padding: 0;">
-              <li style="margin-bottom: 0.75rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-                ⭐ <strong>BMW IT Americas Spotlight:</strong> Recognized for enterprise-wide data leadership impact across the regional network [2026].
+          <div class="tech-honors-list">
+            <h3>Honors & Spotlights</h3>
+            <ul>
+              <li>
+                BMW IT Americas Spotlight: Recognized for enterprise-wide data leadership impact across the regional network [2026].
               </li>
-              <li style="margin-bottom: 0.75rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-                ⭐ <strong>Innovation Day Recognition:</strong> Regional VP appreciation for unveiling Enterprise Data products to the Sales company and CFO during Virtual IT Innovations Week.
+              <li>
+                Innovation Day Recognition: Regional VP appreciation for unveiling Enterprise Data products to the Sales company and CFO during Virtual IT Innovations Week.
               </li>
             </ul>
           </div>
@@ -1195,8 +1207,10 @@
   </section>
 
   <!-- Tech Experience Section -->
-  <section id="tech-experience" class="tech-experience-section scroll-reveal tech-only">
-    <div class="section-container">
+  <section id="tech-experience" class="tech-experience-section scroll-reveal tech-only" style="position: relative; overflow: hidden; background: var(--bg-dark);">
+    <div class="gradient-blob" style="background: var(--gradient-warm); width: 20rem; height: 20rem; top: -5rem; left: 50%; transform: translateX(-50%);"></div>
+    
+    <div class="section-container" style="position: relative; z-index: 10;">
       <div class="section-center-head">
         <div class="section-tag text-center">Career Journey</div>
         <h2 class="section-title text-center">Professional Experience</h2>
@@ -1204,19 +1218,19 @@
 
       <div class="tech-timeline">
         <!-- BMW Lead -->
-        <div class="timeline-item" style="position: relative; padding-left: 3rem;">
-          <div class="timeline-dot" style="position: absolute; left: 0; top: 0.25rem; width: 16px; height: 16px; border-radius: 50%; background: var(--accent-gold); border: 3px solid var(--bg-dark); box-shadow: 0 0 10px var(--accent-gold);"></div>
-          <div class="timeline-date" style="font-size: 0.9rem; color: var(--accent-gold); font-weight: 600; text-transform: uppercase; font-family: var(--font-body); letter-spacing: 0.05em; margin-bottom: 0.5rem;">2020 – Present</div>
-          <div class="timeline-content" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2rem; border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-            <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--text-primary); margin-bottom: 0.25rem;">Feature Team Lead — Enterprise Data & Analytics</h3>
-            <h4 class="timeline-company" style="font-size: 1.05rem; color: var(--accent-gold-light); margin-bottom: 1rem; font-weight: 500;">BMW of North America | Woodcliff Lake, NJ</h4>
-            <p class="timeline-summary" style="font-size: 1rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6;">Defines and implements regional data strategies spanning BI, cloud engineering, and AI/ML platforms. Governs data product portfolios across BMW, MINI, Motorrad, and Rolls-Royce Americas.</p>
-            <ul class="timeline-details" style="padding-left: 1.25rem; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
-              <li style="margin-bottom: 0.5rem;">Secures and manages multi-million dollar transformation budgets, aligning architecture standards with global hubs in South Africa, India, Brazil, and Germany.</li>
-              <li style="margin-bottom: 0.5rem;">Architected cloud-native data frameworks migrating from legacy on-premises systems to AWS (Glue, PySpark, Iceberg) and Snowflake/dbt.</li>
-              <li style="margin-bottom: 0.5rem;">Recognized by the President and CEO of BMW of North America for data leadership that supported high-stakes regulatory compliance.</li>
-              <li style="margin-bottom: 0.5rem;">Accelerated business decision velocity by establishing self-serve analytics via QuickSight and Tableau.</li>
-              <li style="margin-bottom: 0.5rem;">Mentors and coordinates a cross-functional team of 6 direct reports and 20 to 30 indirect strategic vendor team members.</li>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2020 – Present</div>
+          <div class="timeline-content">
+            <h3>Feature Team Lead — Enterprise Data & Analytics</h3>
+            <h4 class="timeline-company">BMW of North America | Woodcliff Lake, NJ</h4>
+            <p class="timeline-summary">Defines and implements regional data strategies spanning BI, cloud engineering, and AI/ML platforms. Governs data product portfolios across BMW, MINI, Motorrad, and Rolls-Royce Americas.</p>
+            <ul class="timeline-details">
+              <li>Secures and manages multi-million dollar transformation budgets, aligning architecture standards with global hubs in South Africa, India, Brazil, and Germany.</li>
+              <li>Architected cloud-native data frameworks migrating from legacy on-premises systems to AWS (Glue, PySpark, Iceberg) and Snowflake/dbt.</li>
+              <li>Recognized by the President and CEO of BMW of North America for data leadership that supported high-stakes regulatory compliance.</li>
+              <li>Accelerated business decision velocity by establishing self-serve analytics via QuickSight and Tableau.</li>
+              <li>Mentors and coordinates a cross-functional team of 6 direct reports and 20 to 30 indirect strategic vendor team members.</li>
             </ul>
           </div>
         </div>

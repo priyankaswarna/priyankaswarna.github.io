@@ -25,19 +25,47 @@
    THEME ENGINE (TECH MODE VARIABLE OVERRIDES)
    ========================================================================== */
 body.tech-mode {
-  --bg-dark: #f8fafc;                 /* Crisp light slate-grey background */
+  --bg-dark: #ffffff;                 /* Pure white background */
   --bg-card: #ffffff;                 /* Pure white cards */
-  --bg-spotlight: #f1f5f9;
-  --primary-burgundy: #0f172a;       /* Slate dark blue for text headings */
+  --bg-spotlight: #f8fafc;            /* Muted slate-grey alternate background */
+  --primary-burgundy: #195066;       /* HSL 200 65% 28% (Rich Deep Ocean Blue) */
   --primary-burgundy-light: #2563eb; /* Secondary blue */
-  --accent-gold: #2563eb;            /* Accent brand blue */
-  --accent-gold-light: #1d4ed8;
-  --accent-gold-dark: #1e3a8a;
-  --text-primary: #0f172a;           /* Slate primary text */
-  --text-secondary: #475569;         /* Slate secondary text */
-  --glass-border: rgba(15, 23, 42, 0.08); /* Clean thin grey borders */
+  --accent-gold: #195066;            /* Primary brand color */
+  --accent-gold-light: #22d3ee;      /* Accent cyan */
+  --accent-gold-dark: #0f172a;       /* Accent slate */
+  --text-primary: #1c202a;           /* HSL 220 20% 14% (Dark Slate Grey) */
+  --text-secondary: #64748b;         /* Slate secondary text */
+  --glass-border: #e2e8f0;            /* HSL 220 15% 90% (Light border) */
   --glass-bg: rgba(255, 255, 255, 0.9);
-  --font-heading: 'Outfit', sans-serif; /* Clean modern font */
+  --font-heading: 'Playfair Display', Georgia, serif; /* Serif contrast */
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #195066 0%, #2563eb 100%);
+  --gradient-accent: linear-gradient(135deg, rgba(25, 80, 102, 0.15) 0%, rgba(139, 92, 246, 0.12) 100%);
+  --gradient-soft: linear-gradient(135deg, rgba(25, 80, 102, 0.03) 0%, rgba(37, 99, 235, 0.02) 100%);
+  --gradient-warm: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+}
+
+/* Gradient Blobs & Rings for Tech Mode Backgrounds */
+body.tech-mode .gradient-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+body.tech-mode .gradient-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: var(--gradient-accent) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* Tech Mode About Section layout grid alignment */
@@ -50,19 +78,24 @@ body.tech-mode .about-grid {
 /* Tech Mode Contact Section overrides */
 body.tech-mode .contact-image-side {
   background-image: linear-gradient(rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.85)), url('assets/ps3.jpeg') !important;
+  background-position: center top !important;
 }
 
 body.tech-mode .contact-grid {
-  display: flex;
-  justify-content: center;
+  display: flex !important;
+  justify-content: center !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 body.tech-mode .contact-image-side {
-  width: 100%;
-  max-width: 650px;
-  min-height: 480px;
-  border-radius: 8px;
-  border: 1px solid var(--glass-border);
+  width: 100% !important;
+  max-width: 650px !important;
+  min-height: 480px !important;
+  border-radius: 16px !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08) !important;
 }
 
 /* Tech Mode Contact Text Overrides (always light on dark photo background) */
@@ -1676,84 +1709,370 @@ body.tech-mode #tech-home .hero-content {
   transform: none;
 }
 
-/* Matte Editorial Cards */
+body.tech-mode .hero-right-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.tech-mode .tech-hero-image-wrapper {
+  position: relative;
+  width: 24rem;
+  height: 28.8rem;
+  margin: 0 auto;
+}
+
+body.tech-mode .tech-hero-image-blur {
+  position: absolute;
+  inset: -6px;
+  background: var(--gradient-primary);
+  filter: blur(16px);
+  opacity: 0.6;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+body.tech-mode .tech-hero-image-frame {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--glass-border);
+}
+
+body.tech-mode .tech-hero-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Matte Editorial Cards & Metric Cards */
 body.tech-mode .metric-card {
-  background: var(--bg-card) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-radius: 4px !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: var(--gradient-accent) !important;
+  border: 1px solid rgba(25, 80, 102, 0.1) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
   transition: var(--transition-smooth) !important;
 }
 
 body.tech-mode .metric-card:hover {
-  border-color: var(--accent-gold) !important;
+  border-color: rgba(25, 80, 102, 0.3) !important;
   transform: translateY(-4px);
-}
-
-/* Minimalist Strategy Framework Box */
-.strategy-container {
-  transition: var(--transition-smooth);
-}
-
-.strategy-container:hover {
-  border-color: var(--accent-gold) !important;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
 }
 
 /* Skills cards minimalist rules */
+body.tech-mode .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-top: 3.5rem;
+}
+
 body.tech-mode .skills-card {
   background: var(--bg-card) !important;
   border: 1px solid var(--glass-border) !important;
-  border-radius: 4px !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: var(--transition-smooth);
+  padding: 2.5rem 2rem !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+  transition: var(--transition-smooth) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+body.tech-mode .skills-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: var(--gradient-soft);
+  pointer-events: none;
+  z-index: 1;
+}
+
+body.tech-mode .skills-card:hover::after {
+  opacity: 1;
 }
 
 body.tech-mode .skills-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05) !important;
   border-color: var(--accent-gold) !important;
+}
+
+body.tech-mode .skills-card-icon {
+  position: relative;
+  z-index: 2;
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 10px;
+  background: var(--gradient-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.tech-mode .skills-card h3 {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+body.tech-mode .skills-card p {
+  position: relative;
+  z-index: 2;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+body.tech-mode .skills-list-tags {
+  position: relative;
+  z-index: 2;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 body.tech-mode .skills-list-tags li {
-  background: rgba(15, 23, 42, 0.04) !important;
+  background: rgba(25, 80, 102, 0.04) !important;
   border: 1px solid var(--glass-border) !important;
   color: var(--text-primary) !important;
-  border-radius: 2px !important;
-  transition: var(--transition-fast);
+  padding: 0.35rem 0.75rem !important;
+  border-radius: 6px !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
 }
 
 body.tech-mode .skills-list-tags li:hover {
-  background: var(--accent-gold) !important;
-  border-color: var(--accent-gold) !important;
-  color: #fff !important;
+  background: var(--primary-burgundy) !important;
+  border-color: var(--primary-burgundy) !important;
+  color: #ffffff !important;
+}
+
+/* About Section layout, Framework Box & Education */
+body.tech-mode .section-alt {
+  background-color: var(--bg-spotlight) !important;
+}
+
+body.tech-mode .tech-education-list {
+  margin-top: 2.5rem;
+}
+
+body.tech-mode .tech-education-list h3 {
+  font-size: 1.25rem;
+  color: var(--accent-gold);
+  margin-bottom: 1.25rem;
+  font-family: var(--font-heading);
+}
+
+body.tech-mode .tech-education-list .edu-item {
+  margin-bottom: 1.5rem;
+  border-left: 2px solid var(--accent-gold) !important;
+  padding-left: 1rem;
+}
+
+body.tech-mode .tech-education-list .edu-year {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--accent-gold) !important;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+body.tech-mode .tech-education-list .edu-item h4 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+body.tech-mode .tech-education-list .edu-school {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+body.tech-mode .tech-education-list .edu-award {
+  font-size: 0.95rem;
+  color: var(--text-primary) !important;
+  font-style: italic;
+  font-weight: 500;
+}
+
+body.tech-mode .framework-heading {
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+  margin-bottom: 2rem;
+  border-left: none !important;
+  padding-left: 0 !important;
+}
+
+body.tech-mode .strategy-container {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--glass-border) !important;
+  padding: 2.5rem !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+  width: 100%;
+}
+
+body.tech-mode .strategy-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+body.tech-mode .strategy-step {
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 1rem;
+}
+
+body.tech-mode .strategy-step:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+body.tech-mode .strategy-step h4 {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  font-family: var(--font-heading);
+}
+
+body.tech-mode .strategy-step p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+body.tech-mode .tech-honors-list {
+  margin-top: 2.5rem;
+}
+
+body.tech-mode .tech-honors-list h3 {
+  font-size: 1.25rem;
+  color: var(--accent-gold) !important;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+
+body.tech-mode .tech-honors-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+body.tech-mode .tech-honors-list li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+body.tech-mode .tech-honors-list li::before {
+  content: '⭐';
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 /* Timeline Cards */
+body.tech-mode .tech-timeline {
+  position: relative;
+  margin-top: 3.5rem;
+}
+
+body.tech-mode .timeline-item {
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 2rem;
+}
+
+body.tech-mode .timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  border: 3px solid var(--bg-dark);
+  box-shadow: 0 0 10px rgba(25, 80, 102, 0.4);
+  z-index: 2;
+}
+
+body.tech-mode .timeline-date {
+  font-size: 0.9rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
 body.tech-mode .timeline-item .timeline-content {
   background: var(--bg-card) !important;
   border: 1px solid var(--glass-border) !important;
-  border-radius: 4px !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: var(--transition-smooth);
+  padding: 2rem !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+  transition: var(--transition-smooth) !important;
 }
 
 body.tech-mode .timeline-item:hover .timeline-content {
   border-color: var(--accent-gold) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05) !important;
 }
 
-body.tech-mode .tech-education-list .edu-item {
-  border-left-color: var(--accent-gold) !important;
+body.tech-mode .timeline-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
 }
 
-body.tech-mode .tech-education-list .edu-year {
-  color: var(--accent-gold) !important;
+body.tech-mode .timeline-company {
+  font-size: 1.05rem;
+  color: #2563eb !important;
+  margin-bottom: 1rem;
+  font-weight: 500;
 }
 
-body.tech-mode .tech-education-list .edu-award {
-  color: var(--accent-gold-light) !important;
+body.tech-mode .timeline-summary {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
 }
 
-body.tech-mode .tech-honors-list h3 {
-  color: var(--accent-gold) !important;
+body.tech-mode .timeline-details {
+  padding-left: 1.25rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+body.tech-mode .timeline-details li {
+  margin-bottom: 0.5rem;
 }
 
 /* Sticky Header active link highlight */
@@ -1907,33 +2226,78 @@ body.tech-mode .nav-menu a.active {
   }
   
   /* Tech Mode Mobile Specific Overrides */
+  body.tech-mode #tech-home {
+    padding: 6rem 1.5rem 4rem 1.5rem !important;
+  }
+  body.tech-mode .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+    text-align: center !important;
+  }
+  body.tech-mode .hero-left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body.tech-mode .hero-tagline {
+    font-size: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+  }
   body.tech-mode .hero-title {
-    font-size: 2.2rem !important;
+    font-size: 2.75rem !important;
     line-height: 1.2 !important;
   }
   body.tech-mode .hero-subtitle {
-    font-size: 1.1rem !important;
+    font-size: 1.05rem !important;
     margin-bottom: 2rem !important;
+  }
+  body.tech-mode .hero-cta-group {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2.5rem !important;
   }
   body.tech-mode .metrics-grid {
     grid-template-columns: 1fr !important;
+    width: 100%;
     gap: 1rem !important;
   }
   body.tech-mode .metric-card {
-    text-align: center !important;
     padding: 1.25rem !important;
+  }
+  body.tech-mode .tech-hero-image-wrapper {
+    width: 17rem !important;
+    height: 20rem !important;
+  }
+  body.tech-mode .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
   }
   body.tech-mode .about-framework-side .section-tag {
     display: none !important;
   }
-  body.tech-mode .about-framework-side .section-title {
+  body.tech-mode .framework-heading {
     margin-top: 1rem !important;
   }
-  body.tech-mode .skills-card {
-    padding: 1.75rem 1.5rem !important;
+  body.tech-mode .skills-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
   }
-  body.tech-mode .tech-skills-section {
-    padding: 5rem 1.5rem !important;
+  body.tech-mode .skills-card {
+    padding: 2rem 1.5rem !important;
+  }
+  body.tech-mode .tech-skills-section,
+  body.tech-mode .about-section,
+  body.tech-mode .tech-experience-section {
+    padding: 4rem 1.5rem !important;
+  }
+  body.tech-mode .timeline-item {
+    padding-left: 2rem !important;
+  }
+  body.tech-mode .timeline-content {
+    padding: 1.5rem !important;
+  }
+  body.tech-mode .timeline-content h3 {
+    font-size: 1.2rem !important;
   }
 }
 
@@ -1948,6 +2312,9 @@ body.tech-mode .nav-menu a.active {
   .mode-toggle-container {
     margin-left: 0.75rem !important;
     margin-top: 0 !important; /* Keep it on the same line as logo and menu toggle */
+  }
+  body.tech-mode .hero-title {
+    font-size: 2.25rem !important;
   }
 }
 
