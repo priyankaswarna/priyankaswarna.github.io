@@ -2259,7 +2259,7 @@ body.tech-mode .nav-menu a.active {
   body.tech-mode #tech-home {
     padding: 6rem 1.5rem 4rem 1.5rem !important;
   }
-  body.tech-mode .hero-grid {
+  body.tech-mode #tech-home .hero-grid {
     display: grid !important;
     grid-template-columns: 1fr !important;
     grid-template-rows: auto auto auto auto !important;
@@ -2267,9 +2267,10 @@ body.tech-mode .nav-menu a.active {
     text-align: center !important;
     width: 100% !important;
   }
-  body.tech-mode .hero-text-group {
+  body.tech-mode #tech-home .hero-text-group {
     grid-column: 1 !important;
     grid-row: 1 !important;
+    text-align: center !important;
   }
   body.tech-mode .hero-tagline {
     font-size: 0.75rem !important;
@@ -2283,7 +2284,7 @@ body.tech-mode .nav-menu a.active {
     font-size: 1.05rem !important;
     margin-bottom: 2rem !important;
   }
-  body.tech-mode .hero-cta-group {
+  body.tech-mode #tech-home .hero-cta-group {
     grid-column: 1 !important;
     grid-row: 2 !important;
     display: flex !important;
@@ -2291,14 +2292,14 @@ body.tech-mode .nav-menu a.active {
     width: 100% !important;
     margin-bottom: 0 !important;
   }
-  body.tech-mode .hero-right-image {
+  body.tech-mode #tech-home .hero-right-image {
     grid-column: 1 !important;
     grid-row: 3 !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
   }
-  body.tech-mode .metrics-grid {
+  body.tech-mode #tech-home .metrics-grid {
     grid-column: 1 !important;
     grid-row: 4 !important;
     grid-template-columns: 1fr !important;
@@ -2308,9 +2309,10 @@ body.tech-mode .nav-menu a.active {
   body.tech-mode .metric-card {
     padding: 1.25rem !important;
   }
-  body.tech-mode .tech-hero-image-wrapper {
+  body.tech-mode #tech-home .tech-hero-image-wrapper {
     width: 17rem !important;
     height: 20rem !important;
+    margin: 0 auto !important;
   }
   body.tech-mode .about-grid {
     grid-template-columns: 1fr !important;
