@@ -75,46 +75,130 @@ body.tech-mode .about-grid {
   gap: 4.5rem !important;
 }
 
-/* Tech Mode Contact Section overrides */
-body.tech-mode .contact-image-side {
-  background-image: linear-gradient(rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.85)), url('assets/ps3.jpeg') !important;
-  background-position: center top !important;
-}
-
-body.tech-mode .contact-grid {
-  display: flex !important;
-  justify-content: center !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-body.tech-mode .contact-image-side {
-  width: 100% !important;
-  max-width: 650px !important;
-  min-height: 480px !important;
-  border-radius: 16px !important;
+/* Tech Mode Contact Section Redesign (Photo separated from text!) */
+body.tech-mode .tech-contact-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1.2fr !important;
+  background: var(--bg-card) !important;
   border: 1px solid var(--glass-border) !important;
-  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.04) !important;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-/* Tech Mode Contact Text Overrides (always light on dark photo background) */
-body.tech-mode .contact-image-side .contact-details-title {
+body.tech-mode .tech-contact-image-side {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 480px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  background: #f8fafc;
+}
+
+body.tech-mode .tech-contact-image-side img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  display: block !important;
+}
+
+body.tech-mode .tech-contact-info-side {
+  padding: 4rem 3rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  background: var(--bg-card) !important;
+  text-align: left !important;
+}
+
+body.tech-mode .tech-contact-desc {
+  font-size: 1.05rem !important;
+  color: var(--text-secondary) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 2.5rem !important;
+}
+
+body.tech-mode .tech-contact-details {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.5rem !important;
+}
+
+body.tech-mode .tech-contact-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1.25rem !important;
+  padding: 1rem 1.25rem !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 12px !important;
+  background: var(--bg-card) !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+body.tech-mode .tech-contact-item:hover {
+  border-color: rgba(25, 80, 102, 0.3) !important;
+  background: var(--gradient-soft) !important;
+  transform: translateY(-2px) !important;
+}
+
+body.tech-mode .tech-contact-item .icon-wrapper {
+  width: 2.75rem !important;
+  height: 2.75rem !important;
+  border-radius: 8px !important;
+  background: var(--gradient-accent) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--primary-burgundy) !important;
+  transition: all 0.3s ease !important;
+}
+
+body.tech-mode .tech-contact-item:hover .icon-wrapper {
+  background: var(--primary-burgundy) !important;
   color: #ffffff !important;
 }
-body.tech-mode .contact-image-side p {
-  color: #cbd5e1 !important;
+
+body.tech-mode .tech-contact-item .item-text {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.25rem !important;
+  text-align: left !important;
 }
-body.tech-mode .contact-image-side .contact-info-item {
-  color: #f1f5f9 !important;
+
+body.tech-mode .tech-contact-item .label {
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: var(--text-secondary) !important;
 }
-body.tech-mode .contact-image-side .contact-info-item:hover {
-  color: #93c5fd !important;
+
+body.tech-mode .tech-contact-item .value {
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
 }
-body.tech-mode .contact-image-side .contact-info-item .icon {
-  background: rgba(255, 255, 255, 0.08) !important;
+
+/* Skills cards SVG icons styles */
+body.tech-mode .skills-card-icon {
+  font-size: initial !important;
+}
+
+body.tech-mode .skills-card-icon svg {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  color: var(--primary-burgundy) !important;
+  transition: all 0.3s ease !important;
+  display: block;
+}
+
+body.tech-mode .skills-card:hover .skills-card-icon svg {
   color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.15) !important;
 }
 
 /* Tech Mode Header & Footer Light Theme Overrides */
@@ -2344,6 +2428,17 @@ body.tech-mode .nav-menu a.active {
   }
   body.tech-mode .timeline-content h3 {
     font-size: 1.2rem !important;
+  }
+
+  body.tech-mode .tech-contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+  body.tech-mode .tech-contact-image-side {
+    min-height: 320px !important;
+    height: 320px !important;
+  }
+  body.tech-mode .tech-contact-info-side {
+    padding: 2.5rem 1.5rem !important;
   }
 }
 

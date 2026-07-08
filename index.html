@@ -1076,7 +1076,14 @@
       <div class="skills-grid">
         <!-- Cloud & Architecture -->
         <div class="skills-card">
-          <div class="skills-card-icon">☁️</div>
+          <div class="skills-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+              <line x1="6" y1="6" x2="6.01" y2="6"></line>
+              <line x1="6" y1="18" x2="6.01" y2="18"></line>
+            </svg>
+          </div>
           <h3>Data Architecture & Cloud</h3>
           <p>Designing modern, scalable cloud-native architectures and managing platform migrations.</p>
           <ul class="skills-list-tags">
@@ -1091,7 +1098,13 @@
 
         <!-- Business Intelligence -->
         <div class="skills-card">
-          <div class="skills-card-icon">📊</div>
+          <div class="skills-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+          </div>
           <h3>Analytics & BI Platforms</h3>
           <p>Transforming complex datasets into executive dashboards and actionable business insights.</p>
           <ul class="skills-list-tags">
@@ -1106,7 +1119,11 @@
 
         <!-- Strategy & Leadership -->
         <div class="skills-card">
-          <div class="skills-card-icon">🧠</div>
+          <div class="skills-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
           <h3>Governance & Strategy</h3>
           <p>Setting data governance policies, managing product portfolios, and directing supplier ecosystems.</p>
           <ul class="skills-list-tags">
@@ -1121,7 +1138,12 @@
 
         <!-- Development -->
         <div class="skills-card">
-          <div class="skills-card-icon">⚙️</div>
+          <div class="skills-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
           <h3>Core Software Engineering</h3>
           <p>Writing clean, production-grade scripts, optimizing databases, and orchestrating API pipelines.</p>
           <ul class="skills-list-tags">
@@ -1243,12 +1265,12 @@
   <!-- Contact Section -->
   <section id="contact" class="contact-section scroll-reveal">
     <div class="section-container">
-      <div class="contact-grid">
+      <!-- Dance Contact Grid -->
+      <div class="contact-grid dance-only">
         <div class="contact-image-side" style="background-image: linear-gradient(rgba(42, 8, 18, 0.4), rgba(18, 18, 18, 0.9)), url('assets/contact.jpg');">
           <div class="contact-details">
             <h3 class="contact-details-title">Get in Touch</h3>
             <p class="dance-link">For bookings, collaborations, training inquiries, or performance requests in the Tri-State area.</p>
-            <p class="tech-link">For professional opportunities, advisory inquiries, or consulting requests.</p>
             
             <div class="contact-info-links">
               <a href="https://instagram.com/priancaa_s" target="_blank" rel="noreferrer noopener" class="contact-info-item dance-link">
@@ -1256,12 +1278,6 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                 </span>
                 <span>@priancaa_s</span>
-              </a>
-              <a href="https://www.linkedin.com/in/priyanka-swarna-01ba4564" target="_blank" rel="noreferrer noopener" class="contact-info-item tech-link">
-                <span class="icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </span>
-                <span>LinkedIn Profile</span>
               </a>
               <div class="contact-info-item">
                 <span class="icon">
@@ -1273,13 +1289,11 @@
           </div>
         </div>
 
-        <div class="contact-form-side dance-only">
+        <div class="contact-form-side">
           <div class="section-tag">Inquiry Form</div>
           <h2 class="section-title">Send a Message</h2>
           
-          <!-- Web3Forms Form Integration (Provides static site email submissions) -->
           <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-            <!-- IMPORTANT: Users will insert their free Access Key here -->
             <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
             <input type="hidden" name="subject" value="New Website Inquiry from priyankaswarna.com">
             <input type="hidden" name="from_name" value="Priyanka Swarna Portfolio Website">
@@ -1312,6 +1326,63 @@
             </button>
             <div class="form-response-msg" id="formResponse"></div>
           </form>
+        </div>
+      </div>
+
+      <!-- Tech Contact Grid -->
+      <div class="tech-contact-grid tech-only">
+        <!-- Photo Side (Clean image, NO text on top!) -->
+        <div class="tech-contact-image-side">
+          <img src="assets/ps3.jpeg" alt="Priyanka Swarna Portrait">
+        </div>
+        
+        <!-- Info Side (Text, details, email, location, LinkedIn) -->
+        <div class="tech-contact-info-side">
+          <div class="section-tag">Contact</div>
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="tech-contact-desc">For professional opportunities, advisory inquiries, or consulting requests in enterprise data strategy and data governance.</p>
+          
+          <div class="tech-contact-details">
+            <a href="https://www.linkedin.com/in/priyanka-swarna-01ba4564" target="_blank" rel="noreferrer noopener" class="tech-contact-item">
+              <span class="icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </span>
+              <div class="item-text">
+                <span class="label">LinkedIn</span>
+                <span class="value">Priyanka Swarna</span>
+              </div>
+            </a>
+
+            <a href="mailto:priyanka.swarna@outlook.com" class="tech-contact-item">
+              <span class="icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </span>
+              <div class="item-text">
+                <span class="label">Email Address</span>
+                <span class="value">priyanka.swarna@outlook.com</span>
+              </div>
+            </a>
+
+            <div class="tech-contact-item">
+              <span class="icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <div class="item-text">
+                <span class="label">Location</span>
+                <span class="value">New Jersey, USA</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
