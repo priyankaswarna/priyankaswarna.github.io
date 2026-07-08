@@ -487,6 +487,20 @@ p {
   transform: translateY(3px);
 }
 
+.cta-button.secondary-btn {
+  background: transparent;
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  box-shadow: none;
+}
+
+.cta-button.secondary-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--accent-gold);
+  border-color: var(--accent-gold-light);
+  transform: translateY(-3px);
+}
+
 /* Badges */
 .badge {
   display: inline-block;
